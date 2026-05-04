@@ -15,7 +15,7 @@ export class Services {
       titleAr: 'تعديل الطقات والحوادث بدون صبغ',
       descriptionEn:
         'Repair suitable dents and accident marks without repainting while preserving the original factory paint.',
-      descriptionAr: 'تعديل الطقات وآثار الحوادث المناسبة بدون صبغ مع الحفاظ على صبغ الوكالة.',
+      descriptionAr: 'تعديل الطقات وآثار الحوادث بدون صبغ مع الحفاظ على صبغ الوكالة.',
     },
     {
       icon: '02',
