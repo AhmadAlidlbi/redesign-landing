@@ -11,9 +11,10 @@ export class Navbar implements OnDestroy {
   isMenuOpen = false;
 
   navLinks = [
-    { id: 'hero', en: 'Home', ar: 'الرئيسية' },
-    { id: 'services', en: 'Services', ar: 'الخدمات' },
-    { id: 'contact', en: 'Contact', ar: 'تواصل معنا' },
+    { id: 'hero',     en: 'Home',     ar: 'الرئيسية'    },
+    { id: 'about',    en: 'About',    ar: 'من نحن'       },
+    { id: 'services', en: 'Services', ar: 'الخدمات'     },
+    { id: 'contact',  en: 'Contact',  ar: 'تواصل معنا'  },
   ];
 
   constructor(public language: Language) {}

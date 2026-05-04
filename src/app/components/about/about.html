@@ -1,0 +1,45 @@
+<section class="about" id="about" [class.rtl]="isArabic">
+  <div class="about__container">
+    <div class="about__header">
+      <span class="about__eyebrow">
+        {{ isArabic ? 'من نحن' : 'About Us' }}
+      </span>
+
+      <h2>
+        {{ isArabic ? 'من نحن' : 'About Re-Design' }}
+      </h2>
+    </div>
+
+    <div class="about__body">
+      @if (isArabic) {
+        <p>
+          معنى ري-ديزاين هو إعادة التصميم من البداية إلى النهاية. نصلح الضربات ونعيد تصميمها مثل التصميم الأساسي للوكالة. نركز على تصليح الطقات والخفسات واسترجاعها بنسبة تصل إلى 100% حسب حالة الضرر، باستخدام أحدث الأدوات والمعدات والتقنيات.
+        </p>
+        <p>
+          فنيونا مدربون بأعلى مستوى لتقديم جودة إصلاح احترافية باستخدام أدوات حديثة وتقنيات صحيحة. نركز على استرجاع تصميم الوكالة، واستخدام أحدث المعدات، واتباع عملية إصلاح عالية الجودة من الفحص إلى التشطيب النهائي.
+        </p>
+
+        <div class="about__pdr">
+          <h3>ما هي تقنية PDR؟</h3>
+          <p>
+            تقنية PDR تعني إصلاح الطقات بدون صبغ، وهي طريقة تستخدم لتعديل الخفسات المناسبة مع الحفاظ على صبغ الوكالة.
+          </p>
+        </div>
+      } @else {
+        <p>
+          Re-Design means redesigning the garage concept from beginning to end. We repair vehicle impacts and reshape them back to the original factory design. Our work focuses on repairing and restoring dents and depressions with up to 100% recovery quality where the damage condition allows, using the latest tools, equipment, and techniques.
+        </p>
+        <p>
+          Our technicians are highly trained to deliver professional repair quality using modern tools and proper techniques. We focus on restoring the factory design, using modern equipment, and following a high-quality repair process from inspection to final finishing.
+        </p>
+
+        <div class="about__pdr">
+          <h3>What is PDR?</h3>
+          <p>
+            PDR stands for Paintless Dent Repair, a technique used to repair suitable dents without repainting while preserving the original factory paint.
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

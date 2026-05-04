@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { Navbar } from './components/navbar/navbar';
 import { Hero } from './components/hero/hero';
+import { About } from './components/about/about';
 import { Services } from './components/services/services';
 import { Cta } from './components/cta/cta';
 import { Footer } from './components/footer/footer';
@@ -9,7 +10,7 @@ import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-flo
 
 @Component({
   selector: 'app-root',
-  imports: [Navbar, Hero, Services, Cta, Footer, ScrollTopComponent, WhatsappFloatComponent],
+  imports: [Navbar, Hero, About, Services, Cta, Footer, ScrollTopComponent, WhatsappFloatComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
