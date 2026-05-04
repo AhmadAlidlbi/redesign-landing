@@ -325,6 +325,7 @@
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
+        cursor: pointer;
         transition:
           opacity 0.24s ease,
           visibility 0s linear 0s;

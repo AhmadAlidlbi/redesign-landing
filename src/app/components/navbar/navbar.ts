@@ -40,6 +40,13 @@ export class Navbar implements OnDestroy {
     document.body.classList.toggle('body--lock', open);
   }
 
+  @HostListener('document:touchstart', ['$event'])
+  onDocumentTouch(event: TouchEvent): void {
+    if (this.isMenuOpen && !(event.target as Element).closest('.navbar')) {
+      this.closeMenu();
+    }
+  }
+
   @HostListener('document:keydown.escape')
   onEscape(): void {
     if (this.isMenuOpen) {
