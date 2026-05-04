@@ -20,7 +20,7 @@ export class Services {
     {
       icon: '02',
       titleEn: 'Large & Small Dents',
-      titleAr: 'إصلاح الطقات كبيرة وصغيرة',
+      titleAr: 'إصلاح الطقات الكبيرة والصغيرة',
       descriptionEn:
         'Repair solutions for both large and small dents depending on the damage condition and panel accessibility.',
       descriptionAr:
