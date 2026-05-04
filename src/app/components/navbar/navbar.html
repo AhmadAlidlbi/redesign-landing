@@ -67,7 +67,7 @@
     </nav>
 
     <div class="navbar__mobile-actions">
-      <button class="navbar__lang mobile" type="button" (click)="switchLanguage()">
+      <button class="navbar__lang mobile" type="button" (click)="switchLanguage(); closeMenu()">
         {{ isArabic ? 'EN' : 'عربي' }}
       </button>
     </div>
