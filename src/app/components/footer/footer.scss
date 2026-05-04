@@ -1,0 +1,119 @@
+.footer {
+  position: relative;
+  background: #141511;
+  color: #a7a7a0;
+  padding: 48px 0 36px;
+  border-top: 1px solid rgba(226, 170, 57, 0.16);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, calc(100% - 40px));
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(226, 170, 57, 0.45), transparent);
+  }
+
+  &__container {
+    width: min(1200px, calc(100% - 40px));
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 28px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__logo-img {
+    width: auto;
+    height: 56px;
+    display: block;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(196, 33, 31, 0.22));
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    gap: 5px;
+  }
+
+  &__brand-main {
+    color: #f7f3ea;
+    font-size: 17px;
+    font-weight: 950;
+    letter-spacing: 2px;
+  }
+
+  &__brand-sub {
+    color: #e2aa39;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #8b8b82;
+    letter-spacing: 0.3px;
+    text-align: end;
+  }
+
+  &.rtl {
+    direction: rtl;
+    font-family: 'Cairo', Arial, sans-serif;
+
+    .footer__brand-main,
+    .footer__brand-sub {
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 36px 0 28px;
+
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 22px;
+    }
+
+    &__logo-img {
+      height: 50px;
+    }
+
+    &__brand-main {
+      font-size: 16px;
+    }
+
+    &__brand-sub {
+      font-size: 10px;
+    }
+
+    p {
+      text-align: start;
+      font-size: 12.5px;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<header class="navbar" [class.rtl]="isArabic" [class.is-open]="isMenuOpen">
+  <div class="navbar__container">
+    <a href="#hero" class="navbar__logo" (click)="closeMenu()">
+      <img
+        class="navbar__logo-img"
+        src="/images/redesign-logo.png"
+        alt="Re-Design — Paintless Dent Repair Specialist in Kuwait"
+        width="56"
+        height="56"
+      />
+
+    </a>
+
+    <nav class="navbar__links" aria-label="Primary">
+      @for (link of navLinks; track link.id) {
+      <a [href]="'#' + link.id">
+        {{ isArabic ? link.ar : link.en }}
+      </a>
+      }
+    </nav>
+
+    <div class="navbar__actions">
+      <button class="navbar__lang" type="button" (click)="switchLanguage()">
+        {{ isArabic ? 'EN' : 'عربي' }}
+      </button>
+
+    </div>
+
+    <button
+      class="navbar__menu-btn"
+      type="button"
+      [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="mobile-nav"
+      (click)="toggleMenu()"
+    >
+      <span class="navbar__menu-bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+  </div>
+
+  <div
+    class="navbar__backdrop"
+    [class.is-open]="isMenuOpen"
+    (click)="closeMenu()"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    id="mobile-nav"
+    class="navbar__mobile"
+    [class.is-open]="isMenuOpen"
+    [attr.aria-hidden]="!isMenuOpen"
+    [attr.inert]="!isMenuOpen ? '' : null"
+    role="dialog"
+    aria-label="Mobile navigation"
+  >
+    <nav class="navbar__mobile-links" aria-label="Mobile primary">
+      @for (link of navLinks; track link.id) {
+      <a [href]="'#' + link.id" (click)="closeMenu()">
+        {{ isArabic ? link.ar : link.en }}
+      </a>
+      }
+    </nav>
+
+    <div class="navbar__mobile-actions">
+      <button class="navbar__lang mobile" type="button" (click)="switchLanguage()">
+        {{ isArabic ? 'EN' : 'عربي' }}
+      </button>
+    </div>
+  </div>
+</header>

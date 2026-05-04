@@ -1,0 +1,23 @@
+<footer class="footer" [class.rtl]="isArabic">
+  <div class="footer__container">
+    <a href="#hero" class="footer__logo">
+      <img
+        class="footer__logo-img"
+        src="/images/redesign-logo.png"
+        alt="Re-Design — Paintless Dent Repair Specialist in Kuwait"
+        width="56"
+        height="56"
+        loading="lazy"
+      />
+
+    </a>
+
+    <p>
+      @if (isArabic) {
+        جميع الحقوق محفوظة. ري ديزاين. <span dir="ltr">&copy; {{ currentYear }}</span>
+      } @else {
+        &copy; {{ currentYear }} Re-Design. All rights reserved.
+      }
+    </p>
+  </div>
+</footer>

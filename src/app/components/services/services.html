@@ -1,0 +1,31 @@
+<section class="services" id="services" [class.rtl]="isArabic">
+  <div class="services__container">
+    <div class="services__header">
+      <span class="services__eyebrow">
+        {{ isArabic ? 'الخدمات' : 'Services' }}
+      </span>
+
+      <h2>
+        {{ isArabic ? 'إصلاح احترافي بدون صبغ' : 'Professional dent repair without repainting' }}
+      </h2>
+    </div>
+
+    <div class="services__grid">
+      @for (service of services; track service.icon) {
+      <article class="services__card">
+        <div class="services__icon">
+          {{ service.icon }}
+        </div>
+
+        <h3>
+          {{ isArabic ? service.titleAr : service.titleEn }}
+        </h3>
+
+        <p>
+          {{ isArabic ? service.descriptionAr : service.descriptionEn }}
+        </p>
+      </article>
+      }
+    </div>
+  </div>
+</section>

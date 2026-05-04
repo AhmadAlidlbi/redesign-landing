@@ -1,0 +1,51 @@
+<section class="hero" id="hero" [class.rtl]="isArabic">
+  <div class="hero__glow hero__glow--red"></div>
+  <div class="hero__glow hero__glow--gold"></div>
+
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1>
+        {{ isArabic ? 'رجّع شكل سيارتك' : 'Restore your car’s shape' }}
+        <span>
+          {{ isArabic ? 'بدون صبغ.' : 'without repainting.' }}
+        </span>
+      </h1>
+
+      <p>
+        {{
+          isArabic
+            ? 'ري-ديزاين متخصصون في إصلاح الطقات والخفسات بتقنية PDR، مع الحفاظ على صبغ الوكالة وقيمة السيارة.'
+            : 'Re-Design specializes in professional PDR repairs for minor dents, door dings, and body-line imperfections while preserving factory paint and vehicle value.'
+        }}
+      </p>
+
+      <div class="hero__actions">
+        <a class="hero__btn hero__btn--primary" href="#services">
+          {{ isArabic ? 'استعرض الخدمات' : 'Explore Services' }}
+        </a>
+
+        <a class="hero__btn hero__btn--secondary" href="#contact">
+          {{ isArabic ? 'تواصل معنا' : 'Contact Us' }}
+        </a>
+      </div>
+
+      <div class="hero__features">
+        <div>
+          <strong>{{ isArabic ? 'بدون صبغ' : 'No repainting' }}</strong>
+          <small>{{ isArabic ? 'الحفاظ على صبغ الوكالة' : 'Original finish preserved' }}</small>
+        </div>
+
+        <div>
+          <strong>{{ isArabic ? 'تقييم سريع' : 'Fast estimate' }}</strong>
+          <small>{{ isArabic ? 'أرسل الصور عبر واتساب' : 'Send photos on WhatsApp' }}</small>
+        </div>
+
+        <div>
+          <strong>{{ isArabic ? 'متخصص PDR' : 'PDR specialist' }}</strong>
+          <small>{{ isArabic ? 'طريقة إصلاح نظيفة' : 'Clean repair approach' }}</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
