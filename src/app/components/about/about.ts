@@ -27,11 +27,14 @@ export class About implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (!this.pdrSection) return;
 
+    const isMobile = window.matchMedia('(max-width: 820px)').matches;
+    const rootMargin = isMobile ? '0px 0px -50% 0px' : '0px 0px -45% 0px';
+
     this.observer = new IntersectionObserver(
       (entries) => {
         this.zone.run(() => { this.pdrOpen = entries[0].isIntersecting; });
       },
-      { threshold: 0, rootMargin: '0px 0px -45% 0px' }
+      { threshold: 0, rootMargin }
     );
 
     this.observer.observe(this.pdrSection.nativeElement);
