@@ -31,7 +31,7 @@ export class About implements AfterViewInit, OnDestroy {
       (entries) => {
         this.zone.run(() => { this.pdrOpen = entries[0].isIntersecting; });
       },
-      { threshold: 0, rootMargin: '0px 0px -35% 0px' }
+      { threshold: 0, rootMargin: '0px 0px -40% 0px' }
     );
 
     this.observer.observe(this.pdrSection.nativeElement);
