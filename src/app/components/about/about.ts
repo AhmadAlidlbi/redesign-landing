@@ -28,7 +28,7 @@ export class About implements AfterViewInit, OnDestroy {
     if (!this.pdrSection) return;
 
     const isMobile = window.matchMedia('(max-width: 820px)').matches;
-    const rootMargin = isMobile ? '0px 0px -50% 0px' : '0px 0px -45% 0px';
+    const rootMargin = isMobile ? '0px 0px -75% 0px' : '0px 0px -45% 0px';
 
     this.observer = new IntersectionObserver(
       (entries) => {
