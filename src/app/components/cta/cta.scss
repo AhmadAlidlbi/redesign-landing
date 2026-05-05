@@ -1,9 +1,9 @@
 .cta {
   position: relative;
   overflow: hidden;
-  background: #20211d;
+  background: var(--c-bg);
   padding: 96px 0;
-  color: #f7f3ea;
+  color: var(--c-text);
 
   &::before {
     content: '';

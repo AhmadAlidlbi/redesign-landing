@@ -1,12 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900;1000&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
+:root {
+  --c-bg: #20211d;
+  --c-bg-deep: #141511;
+  --c-heading: #ffffff;
+  --c-text: #f7f3ea;
+  --c-text-2: #c9c9c0;
+  --c-text-muted: #a7a7a0;
+  --c-text-faint: #8b8b82;
+  --c-gold: #e2aa39;
+  --c-red: #c4211f;
+  --c-red-dark: #941715;
+  --c-surface: rgba(255, 255, 255, 0.04);
+  --c-surface-hover: rgba(255, 255, 255, 0.065);
+  --c-border: rgba(255, 255, 255, 0.08);
+  --c-border-subtle: rgba(255, 255, 255, 0.06);
+  --c-border-mid: rgba(255, 255, 255, 0.12);
+  --c-nav-bg: rgba(20, 21, 17, 0.92);
+  --c-nav-panel: rgba(20, 21, 17, 0.98);
+}
+
+[data-theme='light'] {
+  --c-bg: #f5f2eb;
+  --c-bg-deep: #ede9df;
+  --c-heading: #111210;
+  --c-text: #20211d;
+  --c-text-2: #4a4a42;
+  --c-text-muted: #6b6b62;
+  --c-gold: #9a7218;
+  --c-surface: rgba(0, 0, 0, 0.04);
+  --c-surface-hover: rgba(0, 0, 0, 0.06);
+  --c-border: rgba(0, 0, 0, 0.08);
+  --c-border-subtle: rgba(0, 0, 0, 0.06);
+  --c-border-mid: rgba(0, 0, 0, 0.12);
+  --c-nav-bg: rgba(245, 242, 235, 0.95);
+  --c-nav-panel: rgba(245, 242, 235, 0.98);
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  background: #20211d;
+  background: var(--c-bg);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -14,8 +51,8 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #20211d;
-  color: #f7f3ea;
+  background: var(--c-bg);
+  color: var(--c-text);
   font-family:
     'Montserrat',
     'Cairo',

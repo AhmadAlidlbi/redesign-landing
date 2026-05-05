@@ -1,5 +1,6 @@
 import { Component, HostListener, OnDestroy } from '@angular/core';
 import { Language } from '../../services/language';
+import { Theme } from '../../services/theme';
 
 @Component({
   selector: 'app-navbar',
@@ -17,14 +18,22 @@ export class Navbar implements OnDestroy {
     { id: 'contact',  en: 'Contact',  ar: 'تواصل معنا'  },
   ];
 
-  constructor(public language: Language) {}
+  constructor(public language: Language, public theme: Theme) {}
 
   get isArabic(): boolean {
     return this.language.isArabic;
   }
 
+  get isLight(): boolean {
+    return this.theme.isLight;
+  }
+
   switchLanguage(): void {
     this.language.switchLanguage();
+  }
+
+  toggleTheme(): void {
+    this.theme.toggle();
   }
 
   toggleMenu(): void {

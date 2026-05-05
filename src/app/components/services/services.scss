@@ -1,46 +1,46 @@
 .services {
     position: relative;
-    background: #141511;
-    color: #f7f3ea;
+    background: var(--c-bg-deep);
+    color: var(--c-text);
     padding: 96px 0;
     border-top: 1px solid rgba(226, 170, 57, 0.14);
     border-bottom: 1px solid rgba(226, 170, 57, 0.14);
-  
+
     &__container {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
-  
+
     &__header {
       margin-bottom: 48px;
     }
-  
+
     &__eyebrow {
       display: inline-block;
       margin-bottom: 14px;
-      color: #e2aa39;
+      color: var(--c-gold);
       font-size: 13px;
       font-weight: 950;
       letter-spacing: 4px;
       text-transform: uppercase;
     }
-  
+
     h2 {
       margin: 0;
       max-width: 760px;
-      color: #fff;
+      color: var(--c-heading);
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.02;
       letter-spacing: -2px;
       font-weight: 950;
     }
-  
+
     &__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
-  
+
     &__card {
       position: relative;
       isolation: isolate;
@@ -50,15 +50,15 @@
       border-radius: 30px;
       background:
         radial-gradient(circle at top right, rgba(226, 170, 57, 0.1), transparent 34%),
-        #20211d;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+        var(--c-bg);
+      border: 1px solid var(--c-border);
       transform: translateZ(0);
       backface-visibility: hidden;
       transition:
         transform 0.25s ease,
         border-color 0.25s ease,
         box-shadow 0.25s ease;
-  
+
       &::after {
         content: '';
         position: absolute;
@@ -74,23 +74,23 @@
         pointer-events: none;
         transition: transform 0.25s ease;
       }
-  
+
       &:hover {
         transform: translateY(-8px);
         border-color: rgba(226, 170, 57, 0.42);
         box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
-  
+
         &::after {
           transform: translate(38%, 38%) scale(1.2);
         }
-  
+
         .services__icon {
           color: #20211d;
           background: #e2aa39;
         }
       }
     }
-  
+
     &__icon {
       position: relative;
       z-index: 1;
@@ -100,7 +100,7 @@
       place-items: center;
       margin-bottom: 34px;
       border-radius: 22px;
-      color: #e2aa39;
+      color: var(--c-gold);
       font-size: 18px;
       font-weight: 950;
       background: rgba(226, 170, 57, 0.1);
@@ -109,51 +109,51 @@
         background 0.25s ease,
         color 0.25s ease;
     }
-  
+
     h3 {
       position: relative;
       z-index: 1;
       margin: 0;
-      color: #fff;
+      color: var(--c-heading);
       font-size: 23px;
       line-height: 1.15;
       font-weight: 950;
     }
-  
+
     &__card p {
       position: relative;
       z-index: 1;
       margin: 16px 0 0;
-      color: #a7a7a0;
+      color: var(--c-text-muted);
       font-size: 15px;
       line-height: 1.75;
     }
-  
+
     &.rtl {
       direction: rtl;
       font-family: 'Cairo', Arial, sans-serif;
-  
+
       .services__eyebrow {
         letter-spacing: 0;
       }
-  
+
       h2 {
         letter-spacing: 0;
         line-height: 1.18;
       }
-  
+
       .services__card::after {
         right: auto;
         left: 0;
         transform: translate(-45%, 45%);
       }
-  
+
       .services__card:hover::after {
         transform: translate(-38%, 38%) scale(1.2);
       }
     }
   }
-  
+
   @media (max-width: 820px) {
     .services {
       &__grid {
@@ -161,25 +161,25 @@
       }
     }
   }
-  
+
   @media (max-width: 620px) {
     .services {
       padding: 72px 0;
-  
+
       &__container {
         width: min(1180px, calc(100% - 28px));
       }
-  
+
       &__grid {
         grid-template-columns: 1fr;
         gap: 16px;
       }
-  
+
       &__card {
         min-height: auto;
         padding: 26px;
         border-radius: 28px;
-  
+
         &::after {
           width: 130px;
           height: 130px;
@@ -187,16 +187,16 @@
           bottom: 0;
           transform: translate(35%, 35%);
         }
-  
+
         &:hover {
           transform: none;
         }
-  
+
         &:hover::after {
           transform: translate(35%, 35%);
         }
       }
-  
+
       &.rtl {
         .services__card::after,
         .services__card:hover::after {

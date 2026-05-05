@@ -1,7 +1,7 @@
 .about {
   position: relative;
-  background: #20211d;
-  color: #f7f3ea;
+  background: var(--c-bg);
+  color: var(--c-text);
   padding: 96px 0;
 
   &__container {
@@ -16,7 +16,7 @@
   &__eyebrow {
     display: inline-block;
     margin-bottom: 14px;
-    color: #e2aa39;
+    color: var(--c-gold);
     font-size: 13px;
     font-weight: 950;
     letter-spacing: 4px;
@@ -25,17 +25,25 @@
 
   h2 {
     margin: 0;
-    color: #fff;
+    color: var(--c-heading);
     font-size: clamp(32px, 4.5vw, 52px);
     line-height: 1.05;
     letter-spacing: -2px;
     font-weight: 950;
   }
 
+  &__subheading {
+    margin: 32px 0 14px;
+    color: var(--c-heading);
+    font-size: 20px;
+    font-weight: 950;
+    letter-spacing: -0.4px;
+  }
+
   &__body {
     p {
       margin: 0 0 24px;
-      color: #c9c9c0;
+      color: var(--c-text-2);
       font-size: 17px;
       line-height: 1.9;
 
@@ -49,19 +57,53 @@
     margin-top: 44px;
     padding-top: 36px;
     border-top: 1px solid rgba(226, 170, 57, 0.18);
+  }
 
-    h3 {
-      margin: 0 0 14px;
-      color: #e2aa39;
-      font-size: 16px;
-      font-weight: 950;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
+  &__pdr-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--c-gold);
+    font-size: 16px;
+    font-weight: 950;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: start;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__pdr-chevron {
+    flex-shrink: 0;
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    .about__pdr.is-open & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__pdr-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    .about__pdr.is-open & {
+      grid-template-rows: 1fr;
     }
 
-    p {
+    > p {
+      overflow: hidden;
       margin: 0;
-      color: #a7a7a0;
+      padding-top: 14px;
+      color: var(--c-text-muted);
       font-size: 16px;
       line-height: 1.8;
     }
@@ -80,7 +122,11 @@
       line-height: 1.18;
     }
 
-    .about__pdr h3 {
+    .about__subheading {
+      letter-spacing: 0;
+    }
+
+    .about__pdr-btn {
       letter-spacing: 0;
     }
   }

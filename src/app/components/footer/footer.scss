@@ -1,7 +1,7 @@
 .footer {
   position: relative;
-  background: #141511;
-  color: #a7a7a0;
+  background: var(--c-bg-deep);
+  color: var(--c-text-muted);
   padding: 48px 0 36px;
   border-top: 1px solid rgba(226, 170, 57, 0.16);
 
@@ -55,14 +55,14 @@
   }
 
   &__brand-main {
-    color: #f7f3ea;
+    color: var(--c-text);
     font-size: 17px;
     font-weight: 950;
     letter-spacing: 2px;
   }
 
   &__brand-sub {
-    color: #e2aa39;
+    color: var(--c-gold);
     font-size: 10.5px;
     font-weight: 700;
     letter-spacing: 2.4px;
@@ -73,7 +73,7 @@
     margin: 0;
     font-size: 13px;
     line-height: 1.7;
-    color: #8b8b82;
+    color: var(--c-text-faint);
     letter-spacing: 0.3px;
     text-align: end;
   }
