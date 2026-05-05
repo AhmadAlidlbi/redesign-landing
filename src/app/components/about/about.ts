@@ -27,21 +27,9 @@ export class About implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (!this.pdrSection) return;
 
-    // Skip the first callback — IntersectionObserver always fires once
-    // synchronously on observe() with the current state. We only want to
-    // react when the user actually scrolls the element into view.
-    let initialFired = false;
-
     this.observer = new IntersectionObserver(
       (entries) => {
-        if (!initialFired) {
-          initialFired = true;
-          return;
-        }
-        if (entries[0].isIntersecting) {
-          this.zone.run(() => { this.pdrOpen = true; });
-          this.observer?.disconnect();
-        }
+        this.zone.run(() => { this.pdrOpen = entries[0].isIntersecting; });
       },
       { threshold: 0, rootMargin: '0px 0px -25% 0px' }
     );
